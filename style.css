@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+}
+
+.contaeiner{
+    width: auto;
+    height: auto;
+    background-color: blueviolet;
+}
+
+.header{
+    border: 2px solid;
+    margin-bottom: 100px;
+}
+
+.header ul{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 60px;
+}
+
+
+.header ul li{
+    list-style: none;
+    color: rgb(3, 244, 244);
+}
+
+
+.con{
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    margin-bottom: 60px;
+    background-color: red;
+}
+
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    margin: 130px;
+}
+
+
+#burger,
+[for="burger"i]{
+    display: none;
+}
+
+
+@media(max-width:1200px){
+    .contaeiner{
+        background-color: blue;
+    }
+    .con{
+        background-color: darkgreen;
+    }
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width:800px){
+    .contaeiner{
+        background-color: rgb(197, 36, 63);
+
+    }
+    .con{
+        background-color: yellow;
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
+@media (max-width:500px){
+    .con{
+        width: 300px;
+        height: 350px;
+        border: 4x solid rgb(131, 90, 90)
+    }
+
+
+[for='burger']{
+    display: block;
+    right: 20px;
+    top: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+[for='burger']::before{
+    content: '☰';
+}
+
+
+#burger:checked+[for='burger']::before{
+    content: 'x';
+}
+
+
+nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    margin-top: 50px;
+    width: 140px;
+    border: 2px solid;
+    margin-left: 150px;
+    height: 150px;
+    background-color: rgb(79, 22, 22);
+}
+
+
+.header ul{
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+
+
+.li{
+    margin-right: 20px;
+}
+
+
+.header{
+    margin-bottom: 200px;
+}
+
+
+#burger:checked + label + nav{
+    display: block;
+}
+
+}
+/* @media (max-width:400px) {
+    .con{
+        width: 200px;
+        height: 200px;
+        background-color: cadetblue;  
+    }
+} */
